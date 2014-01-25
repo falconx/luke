@@ -1,0 +1,363 @@
+@import 'reset.css';
+@import 'fonts.css';
+
+body {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+
+	font-family: 'akzidenz-grotesk-medium';
+	color: #fff;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+a:link, a:visited, a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff2a7c !important;
+
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+p {
+	line-height: 1.2;
+	margin: 0 0 15px;
+}
+
+h1 {
+	font-size: 6em;
+	margin: 0 0 20px;
+}
+
+header {
+	margin: 25px;
+	font-size: 2.5em;
+}
+
+sup {
+	font-size: 0.3em;
+	vertical-align: super;
+	position: relative;
+	top: -8px;
+}
+
+.arrow-left {
+	position: relative;
+	top: 4px;
+	font-family: 'make';
+	color: #ff2a7c !important;
+}
+
+.arrow-left:after {
+	content: none !important;
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.page .content {
+	margin: 25px;
+}
+
+.loading {
+	color: #252525;
+}
+
+.expand:after {
+	content: '2';
+	font-family: 'make';
+	color: #ff2a7c;
+	line-height: 0;
+	font-size: 1.2em;
+	position: relative;
+	left: -5px;
+	top: -2px;
+}
+
+.expanded:after {
+	content: '1';
+	font-family: 'make';
+	color: #ff2a7c;
+}
+
+/* Slideshow */
+
+#cbp-bicontrols {
+	top: 45%;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	z-index: 20;
+}
+
+span.cbp-biprev:before {
+	content: 'L';
+	font-family: 'make';
+	color: #ff2a7c;
+	font-size: 3em;
+}
+
+span.cbp-binext:before {
+	content: 'R';
+	font-family: 'make';
+	color: #ff2a7c;
+	font-size: 3em;
+}
+
+/* Overlay */
+
+.overlay {
+	z-index: 20;
+	background: rgba(0, 0, 0, .5);
+}
+
+.overlay .content {
+	position: relative;
+	margin: 200px 10px 0;
+}
+
+.overlay-close {
+	display: block;
+	text-indent: -9999px;
+	height: 23px;
+	width: 23px;
+	margin: 0 0 50px;
+	background: url('../images/overlay-close.png') no-repeat;
+}
+
+/* Primary Navigation */
+
+#primary {
+	position: relative;
+	z-index: 10;
+}
+
+#primary .expand + ul,
+#primary .project {
+	display: none;
+}
+
+#primary > ul > li > ul {
+	font-family: 'consolasregular', sans-serif;
+	font-size: 0.4em;
+	max-width: 500px;
+}
+
+#primary ul ul sup {
+	top: 0;
+	font-size: 0.7em;
+	margin-right: 5px;
+}
+
+#primary ul ul li {
+	display: inline-block;
+	margin-right: 5px;
+	line-height: 1.3;
+	white-space: nowrap;
+}
+
+#primary ul ul li a {
+	line-height: 0.3;
+}
+
+#primary ul ul li a:after {
+	content: '/';
+	color: #fff;
+	margin: 0 10px;
+	font-size: inherit;
+	line-height: inherit;
+	position: static;
+}
+
+#primary ul ul .project {
+	font-family: 'akzidenz-grotesk-medium';
+	font-size: 2.5em;
+}
+
+#primary ul ul .project sup {
+	color: #ff2a7c;
+	margin-right: 10px;
+	font-size: 0.6em;
+	vertical-align: super;
+}
+
+#primary ul ul .project sup:after {
+	content: '/';
+	margin-left: 10px;
+}
+
+#primary ul ul .project div {
+	line-height: 0.8;
+}
+
+#primary ul ul .project div:before {
+	content: '------';
+	margin-right: 10px;
+	letter-spacing: -4px;
+}
+
+#primary > ul > li > ul > li > .expand {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+/* Secondary Navigation */
+
+#secondary {
+	position: absolute;
+	z-index: 10;
+	top: 25px;
+	right: 25px;
+	font-family: 'consolasregular', sans-serif;
+	font-size: 0.9em;
+}
+
+#secondary li {
+	display: inline;
+	margin: 0 25px 0 0;	
+}
+
+#secondary li:last-child {
+	margin: 0;
+}
+
+#secondary a:before {
+	content: 'R';
+	font-family: 'make';
+	color: #ff2a7c;
+	margin: 0 4px 0 0;
+	font-size: 1.2em;
+	position: relative;
+	top: 2px;
+}
+
+/* Project */
+
+.page-project .content {
+	position: absolute;
+	z-index: 20;
+	top: 100px;
+	right: 100px;
+	width: 215px;
+}
+
+.page-project .description {
+	font-family: 'consolasregular', sans-serif;
+	font-size: 0.9em;
+}
+
+.page-project .description .highlight {
+	display: inline;
+	line-height: 1.45;
+	background: #ff2a7c;
+}
+
+.page-project .description-toggle {
+	font-size: 1.4em;
+	margin: 0 0 7px;
+	display: block;
+}
+
+.page-project .description-toggle:after {
+	left: auto;
+	font-size: 1.5em;
+}
+
+/* Manifesto */
+
+.page-manifesto .content {
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 0 20px;
+}
+
+/* Media Queries */
+
+@media (max-width : 800px) {
+
+	#secondary {
+		text-align: right;
+	}
+
+	#secondary li {
+		display: block;
+		margin: 0;
+		line-height: 1.3;
+	}
+
+	.page-project,
+	.page-project .content {
+		position: static;
+		margin-top: 0;
+	}
+
+	.page-project .cbp-bislideshow {
+		top: auto;
+		margin: 10px 0 0;
+	}
+
+	.page-project .description {
+		margin: 50px 0 0;
+	}
+
+}
+
+@media only screen and (min-width : 320px) and (max-width : 568px) {
+
+	header {
+		font-size: 1.3em;
+		line-height: 1.1;
+		margin-bottom: 7px;
+	}
+
+	#secondary {
+		display: none;
+	}
+
+	#cbp-bicontrols {
+		display: none;
+	}
+
+	.page-project .description-toggle {
+		font-size: 1em;
+		color: #ff2a7c;
+	}
+
+	.page-project .content {
+		width: 70%;
+	}
+
+	#primary > ul > li > ul {
+		font-size: 0.7em;
+	}
+
+	#primary ul ul .project {
+		font-size: 1.4em;
+	}
+
+	#primary ul ul .project div {
+		line-height: 1;
+	}
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px)  and (orientation : landscape) {
+
+	.page-project .cbp-bislideshow {
+		top: 0;
+		margin-top: 0;
+	}
+
+}

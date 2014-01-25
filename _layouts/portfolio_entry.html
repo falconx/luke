@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="page page-project">
+	<ul id="cbp-bislideshow" class="cbp-bislideshow">
+		{% for image in page.images %}
+	      <li class="slide" data-text="{{ image.text }}" data-background="{{ image.background }}">
+	      	<img src="/projects/{{ page.project }}/{% if image.src %}{{ image.src }}{% else %}{{ image }}{% endif %}" />
+	      </li>
+	    {% endfor %}
+	</ul>
+	<div id="cbp-bicontrols" class="cbp-bicontrols">
+		<span class="cbp-biprev"></span>
+		<span class="cbp-binext"></span>
+	</div>
+
+	<div class="content">
+		<a href="javascript:void(0);" class="description-toggle expand expanded">Hide Info</a>
+		<div class="description">{{ content }}</div>
+	</div>
+</div>

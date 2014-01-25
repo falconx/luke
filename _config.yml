@@ -1,0 +1,5 @@
+name: Luke Burroughs - Portfolio
+markdown: redcarpet
+pygments: true
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
