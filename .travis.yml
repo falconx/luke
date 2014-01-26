@@ -6,6 +6,13 @@ deploy:
   on:
     repo: falconx/luke
 language: ruby
-before_deploy: echo '--- before deploy ---'
-after_deploy: echo '--- after deploy ---'
-script: bundle exec jekyll build
+
+before_deploy:
+  - echo '--- before deploy ---'
+
+after_deploy:
+  - echo '--- after deploy ---'
+  - bundle exec jekyll serve
+
+script:
+  - bundle exec jekyll build
