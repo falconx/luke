@@ -40,6 +40,7 @@ module JB
   end #Path
 end #JB
 
+desc "Serve Jekyll site"
 task :default do
   system "jekyll serve"
 end # task :default
