@@ -40,7 +40,9 @@ module JB
   end #Path
 end #JB
 
-require 'config.ru'
+require 'bundler'
+Bundler.require(:default, :production)
+run Rack::Jekyll.new
 #require 'rspec/core/rake_task'
 #task :default => :spec
 #RSpec::Core::RakeTask.new
