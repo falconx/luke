@@ -55,5 +55,6 @@ PLATFORMS
 DEPENDENCIES
   bundler
   jekyll
+  rack
   rack-jekyll
   rake
