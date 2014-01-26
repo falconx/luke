@@ -40,6 +40,10 @@ module JB
   end #Path
 end #JB
 
+task :default do
+  system "jekyll serve"
+end # task :default
+
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
