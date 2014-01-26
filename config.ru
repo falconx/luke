@@ -1,4 +1,4 @@
-require 'bundler'
-Bundler.require(:default, :production)
+#require 'bundler'
+#Bundler.require(:default, :production)
 
-run Rack::Jekyll.new
+#run Rack::Jekyll.new
