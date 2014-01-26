@@ -7,5 +7,6 @@ deploy:
     repo: falconx/lukeburroughs
 
 language: ruby
-script: bundle exec jekyll build
-install: bundle install
+#script: bundle exec jekyll build
+script: jekyll build
+#install: bundle install
