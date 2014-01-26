@@ -40,12 +40,17 @@ module JB
   end #Path
 end #JB
 
-require 'bundler'
-Bundler.require(:default, :production)
-run Rack::Jekyll.new
+#require 'bundler'
+#Bundler.require(:default, :production)
+#run Rack::Jekyll.new
 #require 'rspec/core/rake_task'
 #task :default => :spec
 #RSpec::Core::RakeTask.new
+task :default => :run
+
+task :run do
+  system "jekyll serve"  
+end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
