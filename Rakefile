@@ -40,10 +40,14 @@ module JB
   end #Path
 end #JB
 
-desc "Serve Jekyll site"
+# Execute a system command
+def execute(command)
+  system "#{command}"
+end
+
 task :default do
-  system "jekyll serve"
-end # task :default
+  execute("jekyll serve --watch")
+end
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
