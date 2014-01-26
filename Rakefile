@@ -40,9 +40,10 @@ module JB
   end #Path
 end #JB
 
-require 'rspec/core/rake_task'
-task :default => :spec
-RSpec::Core::RakeTask.new
+require 'config.ru'
+#require 'rspec/core/rake_task'
+#task :default => :spec
+#RSpec::Core::RakeTask.new
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
