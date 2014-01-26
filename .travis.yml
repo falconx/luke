@@ -5,3 +5,7 @@ deploy:
   app: lukeburroughs
   on:
     repo: falconx/lukeburroughs
+
+language: ruby
+script: bundle exec jekyll build
+install: bundle install
