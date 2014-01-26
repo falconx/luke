@@ -40,14 +40,9 @@ module JB
   end #Path
 end #JB
 
-# Execute a system command
-def execute(command)
-  system "#{command}"
-end
-
-task :default do
-  execute("jekyll serve --watch")
-end
+require 'rspec/core/rake_task'
+task :default => :spec
+RSpec::Core::RakeTask.new
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
 desc "Begin a new post in #{CONFIG['posts']}"
