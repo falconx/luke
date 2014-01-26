@@ -10,5 +10,4 @@ language: ruby
 #script: bundle exec jekyll build
 #install: bundle install
 
-script:
-  - jekyll serve
+script: "bundle exec jekyll build"
