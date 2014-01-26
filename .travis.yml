@@ -15,4 +15,5 @@ after_deploy:
   - bundle exec jekyll serve
 
 script:
+  - bundle install
   - bundle exec jekyll build
