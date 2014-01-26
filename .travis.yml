@@ -12,6 +12,7 @@ before_deploy:
 
 after_deploy:
   - echo '--- after deploy ---'
+  - bundle install
   - bundle exec jekyll serve
 
 script:
