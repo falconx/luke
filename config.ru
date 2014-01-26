@@ -1,13 +1,7 @@
-require 'bundler'
+#require 'bundler'
+require 'rack/all'
+#require 'rack/jekyll'
 
-Bundler.require(:default, :production)
-
-require 'rack'
-
-require 'rack/jekyll'
-
-require 'rubygems'
+#Bundler.require(:default, :production)
 
 run Rack::Jekyll.new
-
-echo 'rack-jekyll' > .gems
