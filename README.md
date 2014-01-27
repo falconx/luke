@@ -22,3 +22,4 @@ heroku open
 
 To learn how to use jekyll-bootstrap for blogging, have a look at the
 documentation at <http://jekyllbootstrap.com>
+
