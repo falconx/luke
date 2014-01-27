@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "bundle"
 #gem "rack"
 gem "rack-contrib"
 gem "rake"                # actually not need for heroku but for the provided Rakefile

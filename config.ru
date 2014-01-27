@@ -1,5 +1,5 @@
-#require 'bundler'
-#Bundler.require(:default, :production)
+require 'bundler'
+Bundler.require(:default, :production)
 
 require 'yaml'
 require 'rack/jekyll'
