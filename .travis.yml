@@ -1,3 +1,4 @@
+language: ruby
 deploy:
   provider: heroku
   api_key:
@@ -5,16 +6,3 @@ deploy:
   app: lukeburroughs
   on:
     repo: falconx/luke
-language: ruby
-
-before_deploy:
-  - echo '--- before deploy ---'
-
-after_deploy:
-  - echo '--- after deploy ---'
-  - bundle install
-  - bundle exec jekyll serve
-
-script:
-  - bundle install
-  - bundle exec jekyll build
