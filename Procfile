@@ -1,1 +1,1 @@
-web: bundle exec jekyll serve -p $PORT
+web: bundle exec rackup config.ru -p 4000
