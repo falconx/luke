@@ -4,6 +4,7 @@ before_install:
 rvm:
 - 2.1.0
 deploy:
+  strategy: git
   provider: heroku
   app: lukeburroughs
   on:
