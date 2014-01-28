@@ -12,4 +12,4 @@ deploy:
     secure: pfQSXgn8o7aUnpGgJg7Wf2M+9+bNcQ9kFpAwk6+iFHhmJGUY6XBP2RPoSAHTyKk0EVHL5NwcOqFXEWcr0ejaZrzYnShAvhjcXp0QjorG3t07ov2LLBwCPnDHLrUHNzmoYGnzhSRPDE17LeEJnfRTM0X55NfhPY4T3ZjMKb51BsI=
   app: lukeburroughs
   on:
-    repo: falconx/lukeburroughs
+    repo: falconx/luke
