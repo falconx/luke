@@ -1,5 +1,7 @@
-require_relative "rubygems"
-require_relative 'rake'
-require_relative 'yaml'
+require "rubygems"
+require 'rake'
+require 'yaml'
 
-task :default => [:lint]
+task :default => :run
+
+task :run do end
