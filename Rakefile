@@ -2,8 +2,6 @@
 #require 'rake'
 #require 'yaml'
 
-#task :default => :run
+task :default => :run
 
-#task :run do end
-
-task :default => do end;
+task :run do end
