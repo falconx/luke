@@ -249,7 +249,7 @@ span.cbp-binext:before {
 	position: absolute;
 	z-index: 20;
 	top: 100px;
-	right: 100px;
+	right: 148px;
 	width: 215px;
 }
 
@@ -344,7 +344,7 @@ span.cbp-binext:before {
 	}
 
 	#primary ul ul .project {
-		font-size: 1.4em;
+		font-size: 1.45em;
 	}
 
 	#primary ul ul .project div {
@@ -353,7 +353,7 @@ span.cbp-binext:before {
 
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px)  and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 
 	.page-project .cbp-bislideshow {
 		top: 0;
