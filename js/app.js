@@ -12,6 +12,11 @@
 
 		init();
 
+		function pad( str, max ) {
+		  str = str.toString();
+		  return str.length < max ? pad("0" + str, max) : str;
+		}
+
 		// Initialise page
 		function init() {
 			// Initialise slideshow plugin
@@ -174,18 +179,16 @@
 						$('.content', '#main').hide();
 						$('.description').hide();
 
-						setTimeout(function() { ////////////////////////////////////////////// REMOVE THIS - WE'RE JUST DEMONSTRATING A POINT
-							$('body').css({ 'color': '#fff' });
+						$('body').css({ 'color': '#fff' });
 
-							setPortfolioBindings();
+						setPortfolioBindings();
 
-							if( timeout ) {
-								timeout = false;
-							}
+						if( timeout ) {
+							timeout = false;
+						}
 
-							// Reload slideshow plugin
-							cbpBGSlideshow.init();
-						}, 1500); ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						// Reload slideshow plugin
+						cbpBGSlideshow.init();
 					});
 				});
 			}
@@ -207,6 +210,10 @@
 			}).done(function( data ) {
 				if( !$('#main').find('.page-manifesto').length ) {
 					$('#main').append( data );
+
+					setTimeout(function() {
+						$('.overlay').height( $(document).height() );
+					}, 100);
 				}
 
 				// Close overlay
@@ -219,13 +226,13 @@
 	});
 
 	// Swipe
-	jQuery(window).on('swipeleft', function( event ) {
+	$(window).on('swipeleft', function( event ) {
 		if( !$('.overlay').length ) {
 			$('.cbp-biprev').trigger('click');
 		}
 	});
 
-	jQuery(window).on('swiperight', function( event ) {
+	$(window).on('swiperight', function( event ) {
 		if( !$('.overlay').length ) {
 			$('.cbp-binext').trigger('click');
 		}
@@ -253,6 +260,6 @@
 				$('.overlay').remove();
 				break;
 		}
-	});
+	})
 
 })( jQuery );
