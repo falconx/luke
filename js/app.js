@@ -269,7 +269,7 @@
 						});
 
 						if( valid ) {
-							var body = "My name is " + name.val() + ", you can contact me back at " + contact.val() + "%0D%0A%0D%0A" + message.val();
+							var body = "My name is " + name.val() + ", you can contact me back at " + contact.val() + "%0D%0A%0D%0A" + message.val().split('\n').join("%0D%0A");
 							window.open('mailto:luke.burroughs@btinternet.com?body=' + body, '_blank');
 						}
 					});
