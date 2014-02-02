@@ -99,10 +99,10 @@
 			$('.description').find('p').wrapInner('<span class="highlight" />');
 
 			// Toggle project's info display
-			$('.description-toggle').unbind('click').on('click', function() {
-				var $self = $(this);
+			$('.description-toggle, .description .close').unbind('click').on('click', function() {
+				var $self = $(this).closest('.content').find('.description-toggle')
 
-				$(this).siblings('.description').slideToggle(function() {
+				$self.siblings('.description').slideToggle(function() {
 					var text = $(this).is(':visible') ? 'Hide Info' : 'Show Info';
 					$self.text(text);
 				});
@@ -210,7 +210,7 @@
 				}
 
 				// Close overlay
-				$('.overlay-close').on('click', function() {
+				$('.close').on('click', function() {
 					$(this).closest('.overlay').remove();
 				});
 			});
@@ -220,11 +220,15 @@
 
 	// Swipe
 	jQuery(window).on('swipeleft', function( event ) {
-		$('.cbp-biprev').trigger('click');
+		if( !$('.overlay').length ) {
+			$('.cbp-biprev').trigger('click');
+		}
 	});
 
 	jQuery(window).on('swiperight', function( event ) {
-		$('.cbp-binext').trigger('click');
+		if( !$('.overlay').length ) {
+			$('.cbp-binext').trigger('click');
+		}
 	});
 
 	// Key Bindings

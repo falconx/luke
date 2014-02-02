@@ -105,36 +105,45 @@ sup {
 span.cbp-biprev:before {
 	content: 'L';
 	font-family: 'make';
+	font-size: 60px;
 	color: #ff2a7c;
-	font-size: 3em;
 }
 
 span.cbp-binext:before {
 	content: 'R';
 	font-family: 'make';
+	font-size: 60px;
 	color: #ff2a7c;
-	font-size: 3em;
 }
 
 /* Overlay */
 
 .overlay {
 	z-index: 20;
-	background: rgba(0, 0, 0, .5);
+	background: rgba(0, 0, 0, .7);
 }
 
 .overlay .content {
 	position: relative;
-	margin: 200px 10px 0;
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 0 20px;
 }
 
-.overlay-close {
+.overlay .content > div {
+	line-height: 1.5;
+}
+
+.close {
 	display: block;
-	text-indent: -9999px;
-	height: 23px;
-	width: 23px;
-	margin: 0 0 50px;
-	background: url('../images/overlay-close.png') no-repeat;
+	margin: 0 0 50px
+}
+
+.close:before {
+	content: 'x';
+	font-family: 'make';
+	font-size: 2em;
+	color: #ff2a7c;
 }
 
 /* Primary Navigation */
@@ -156,8 +165,8 @@ span.cbp-binext:before {
 }
 
 #primary ul ul sup {
-	top: 0;
-	font-size: 0.7em;
+	top: 2px;
+	font-size: 0.6em;
 	margin-right: 5px;
 }
 
@@ -175,7 +184,7 @@ span.cbp-binext:before {
 #primary ul ul li a:after {
 	content: '/';
 	color: #fff;
-	margin: 0 10px;
+	margin-left: 10px;
 	font-size: inherit;
 	line-height: inherit;
 	position: static;
@@ -189,7 +198,7 @@ span.cbp-binext:before {
 #primary ul ul .project sup {
 	color: #ff2a7c;
 	margin-right: 10px;
-	font-size: 0.6em;
+	font-size: 0.5em;
 	vertical-align: super;
 }
 
@@ -205,7 +214,7 @@ span.cbp-binext:before {
 #primary ul ul .project div:before {
 	content: '------';
 	margin-right: 10px;
-	letter-spacing: -4px;
+	letter-spacing: -5px;
 }
 
 #primary > ul > li > ul > li > .expand {
@@ -254,8 +263,13 @@ span.cbp-binext:before {
 }
 
 .page-project .description {
+	position: relative;
 	font-family: 'consolasregular', sans-serif;
 	font-size: 0.9em;
+}
+
+.page-project .description .close {
+	display: none;
 }
 
 .page-project .description .highlight {
@@ -273,14 +287,6 @@ span.cbp-binext:before {
 .page-project .description-toggle:after {
 	left: auto;
 	font-size: 1.5em;
-}
-
-/* Manifesto */
-
-.page-manifesto .content {
-	max-width: 960px;
-	margin: 100px auto;
-	padding: 0 20px;
 }
 
 /* Media Queries */
@@ -316,6 +322,10 @@ span.cbp-binext:before {
 
 @media only screen and (min-width : 320px) and (max-width : 568px) {
 
+	h1 {
+		font-size: 4.5em;
+	}
+
 	header {
 		font-size: 1.3em;
 		line-height: 1.1;
@@ -326,8 +336,17 @@ span.cbp-binext:before {
 		display: none;
 	}
 
+	.expand:after {
+		left: auto;
+	}
+
 	#cbp-bicontrols {
 		display: none;
+	}
+
+	.page-project .content,
+	.page-project .description > div {
+		width: 85%;
 	}
 
 	.page-project .description-toggle {
@@ -335,8 +354,14 @@ span.cbp-binext:before {
 		color: #ff2a7c;
 	}
 
-	.page-project .content {
-		width: 70%;
+	.page-project .description .close {
+		display: block;
+		position: absolute;
+		right: 0;
+	}
+
+	.page-project .description .close {
+		top: -5px;
 	}
 
 	#primary > ul > li > ul {
@@ -351,6 +376,13 @@ span.cbp-binext:before {
 		line-height: 1;
 	}
 
+	.overlay .close {
+		margin-bottom: 10px;
+	}
+
+	.overlay .content {
+		margin: 20px auto;
+	}
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
