@@ -1,0 +1,25 @@
+<header>
+	<nav id="primary">
+		<ul>
+			<li class="persist"><a href="/" title="Go to home page">Luke Burroughs&trade;</a></li>
+			<li class="persist">
+				<a href="javascript:void(0);" title="" class="expand">Projects</a>
+				<ul>
+					{% for post in site.posts %}
+					<li>
+						<a href="javascript:void(0);" title="" class="expand isolate"><sup>{{ forloop.index | pad_text }}</sup>{{ post.title }}</a>
+						<div class="project" data-project="{{ post.id }}">
+							<sup>{{ forloop.index | pad_text }}</sup>{{ post.title }}
+							<a class="arrow-left back" href="javascript:void(0);" title="Back to projects">L</a>
+							<div>{{ post.subtitle }}</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</li>
+			<li><a id="manifesto" href="javascript:void(0);" title="">Manifesto</a></li>
+			<li><a id="contact" href="javascript:void(0);" title="">Get In Touch</a></li>
+		</ul>
+	</nav>
+	<div class="loading">Initialising</div>
+</header>

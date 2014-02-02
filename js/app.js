@@ -19,6 +19,10 @@
 
 		// Initialise page
 		function init() {
+			// Remove no JS fallback content
+			$('body').removeClass('nojs');
+			$('#nojs').remove();
+
 			// Initialise slideshow plugin
 			cbpBGSlideshow.init();
 
@@ -165,8 +169,6 @@
 								// Hide description section by default for mobile
 								$('.description-toggle').toggleClass('expanded', !isMobile);
 								updateToggleState( $('.description-toggle'), $('.description') );
-
-								// $('body').css({ 'z-index': 1, 'position': 'relative' });
 							});
 						}
 					}
@@ -214,6 +216,63 @@
 					setTimeout(function() {
 						$('.overlay').height( $(document).height() );
 					}, 100);
+				}
+
+				// Close overlay
+				$('.close').on('click', function() {
+					$(this).closest('.overlay').remove();
+				});
+			});
+		});
+
+		// Show contact overlay
+		$('#contact').on('click', function() {
+			$.ajax({
+				url: '/partials/contact.html'
+			}).done(function( data ) {
+				if( !$('#main').find('.page-contact').length ) {
+					$('#main').append( data );
+					$('input:eq(0)', '.page-contact').focus();
+
+					setTimeout(function() {
+						$('.overlay').height( $(document).height() );
+					}, 100);
+
+					$('input[type="submit"]', '.page-contact').on('click', function( evt ) {
+						evt.preventDefault();
+
+						var name = $('[name="name"]'),
+							contact = $('[name="contact"]'),
+							message = $('[name="message"]'),
+							fields = [name, contact, message],
+							valid = true;
+
+						// Validation
+						$.each(fields, function() {
+							var $this = $(this);
+
+							if( !$this.val() ) {
+								$this.addClass('error');
+								
+								if( $this.attr('name') === 'message' ) {
+									$(this).val('Missing something?');
+								}
+
+								if( valid ) {
+									$(this).focus();
+								}
+
+								valid = false;
+							} else {
+								$this.removeClass('error');
+							}
+						});
+
+						if( valid ) {
+							var body = "My name is " + name.val() + ", you can contact me back at " + contact.val() + "%0D%0A%0D%0A" + message.val();
+							window.open('mailto:luke.burroughs@btinternet.com?body=' + body, '_blank');
+						}
+					});
 				}
 
 				// Close overlay
