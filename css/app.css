@@ -324,6 +324,11 @@ span.cbp-binext:before {
 	color: #ff2a7c;
 }
 
+.close:hover:before,
+.close:active:before {
+	color: #fff;
+}
+
 /* Primary Navigation */
 
 #primary {

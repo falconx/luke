@@ -7,9 +7,9 @@
 				<ul>
 					{% for post in site.posts %}
 					<li>
-						<a href="javascript:void(0);" title="" class="expand isolate"><sup>{{ forloop.index | pad_text }}</sup>{{ post.title }}</a>
+						<a href="javascript:void(0);" title="" class="expand isolate"><sup>{{ forloop.index | pad_text: 3 }}</sup>{{ post.title }}</a>
 						<div class="project" data-project="{{ post.id }}">
-							<sup>{{ forloop.index | pad_text }}</sup>{{ post.title }}
+							<sup>{{ forloop.index | pad_text: 3 }}</sup>{{ post.title }}
 							<a class="arrow-left back" href="javascript:void(0);" title="Back to projects">L</a>
 							<div>{{ post.subtitle }}</div>
 						</div>
