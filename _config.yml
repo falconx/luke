@@ -6,4 +6,4 @@ destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
-exclude:     ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+exclude:     ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md']
