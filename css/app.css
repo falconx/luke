@@ -330,11 +330,14 @@ span.cbp-binext:before {
 }
 
 .slide-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
 	height: 100%;
 	width: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	
+	background-position: center center;
 }
 
 .overlay-rewire {
