@@ -336,7 +336,7 @@ span.cbp-binext:before {
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
 	background-size: 100%;
-	
+
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -522,6 +522,12 @@ span.cbp-binext:before {
 		margin: 50px 0 0;
 	}
 
+	.slide-overlay {
+		-webkit-background-size: 180%;
+		-moz-background-size: 180%;
+		background-size: 180%;
+	}
+
 }
 
 @media (max-width : 620px) {
@@ -588,6 +594,12 @@ span.cbp-binext:before {
 
 	.page-project .description .close {
 		top: -5px;
+	}
+
+	.slide-overlay {
+		-webkit-background-size: 200%;
+		-moz-background-size: 200%;
+		background-size: 200%;
 	}
 
 	#primary > ul > li > ul {
