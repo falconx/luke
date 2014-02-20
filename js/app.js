@@ -225,6 +225,26 @@
 			});
 		});
 
+		// Show build overlay
+		$('#build').on('click', function() {
+			$.ajax({
+				url: '/partials/build.html'
+			}).done(function( data ) {
+				if( !$('#main').find('.page-build').length ) {
+					$('#main').append( data );
+
+					setTimeout(function() {
+						$('.overlay').height( $(document).height() );
+					}, 100);
+				}
+
+				// Close overlay
+				$('.close').on('click', function() {
+					$(this).closest('.overlay').remove();
+				});
+			});
+		});
+
 		// Show contact overlay
 		$('#contact').on('click', function() {
 			$.ajax({
