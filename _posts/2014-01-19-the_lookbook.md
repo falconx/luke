@@ -1,6 +1,6 @@
 ---
 layout: portfolio_entry
-title: The Lookbook
+title: The Lookbook!
 subtitle: Consuming Fashion
 project: the_lookbook
 images: [{ src: image4.png, text: '#252525', background: '#252525' }, { src: image3.png }]
