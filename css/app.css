@@ -131,6 +131,10 @@ blockquote {
 	left: -9999px;
 }
 
+a.active {
+  border-bottom: 2px solid #ff2a7c;
+}
+
 /* Form elements */
 
 input[type="text"] {
@@ -350,9 +354,17 @@ span.cbp-binext:before {
 	line-height: 1.5;
 }
 
-.close {
-	display: block;
+.overlay-links {
+  font-size: 1.4em;
 	margin: 0 0 50px
+}
+
+.overlay-links a {
+  margin: 0 20px 0 0;
+}
+
+.close {
+  font-size: 0.8em;
 }
 
 .close:before {

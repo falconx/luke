@@ -206,11 +206,12 @@
 		});
 
 		// Show manifesto overlay
-		$('#manifesto').on('click', function() {
+		$('body').delegate('#manifesto', 'click', function() {
 			$.ajax({
 				url: '/partials/manifesto.html'
 			}).done(function( data ) {
 				if( !$('#main').find('.page-manifesto').length ) {
+          $('.overlay').remove();
 					$('#main').append( data );
 
 					setTimeout(function() {
@@ -226,11 +227,12 @@
 		});
 
 		// Show build overlay
-		$('#build').on('click', function() {
+		$('body').delegate('#build', 'click', function() {
 			$.ajax({
 				url: '/partials/build.html'
 			}).done(function( data ) {
 				if( !$('#main').find('.page-build').length ) {
+          $('.overlay').remove();
 					$('#main').append( data );
 
 					setTimeout(function() {
