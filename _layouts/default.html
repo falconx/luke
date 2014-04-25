@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="lukeburroughs">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,7 +22,7 @@
 
 		{% include secondary.html %}
 
-		<div id="main">
+		<div id="main" data-ng-controller="page">
 
 			{{ content }}
 
@@ -31,6 +31,21 @@
 		<!-- Load Scripts -->
 		<script src="/js/background-slideshow/js/jquery.imagesloaded.min.js"></script>
 		<script src="/js/background-slideshow/js/cbpBGSlideshow.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript">
+
+		var app = angular.module('lukeburroughs', []);
+
+		app.controller('navigation', function( $scope ) {
+			//
+		});
+
+		app.controller('page', function( $scope ) {
+			//
+		});
+
+		</script>
 
 	</body>
 </html>
